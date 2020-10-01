@@ -13,17 +13,16 @@ import java.io.OutputStreamWriter;
 import java.io.InputStream;
 
 /**
- * Built using CHelper plug-in
- * Actual solution is at the top
- *
  * @author Rohan Gandhi
  */
+
 public class Solution {
     public static void main(String[] args) {
         InputStream inputStream = System.in;
         OutputStream outputStream = System.out;
         Scanner in = new Scanner(inputStream);
         PrintWriter out = new PrintWriter(outputStream);
+
         PaintersDuel solver = new PaintersDuel();
         int testCount = Integer.parseInt(in.next());
         for (int i = 1; i <= testCount; i++)
@@ -77,6 +76,7 @@ public class Solution {
             String berthe = rb + "-" + pb;
             blocked.add(alma);
             blocked.add(berthe);
+
             int ans = calcScore(blocked, s, alma, berthe, true, true, 0);
             out.println("Case #" + testNumber + ": " + ans);
         }
